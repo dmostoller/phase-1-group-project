@@ -1,0 +1,25 @@
+{
+    "featured-events": [
+      {
+        "id": 1,
+        "name": "Taylor Swift New Eras Tour",
+        "image": "assets/taylor-swift.jpeg",
+        "date": "Feb. 28th, 2024",
+        "venue": "Wells Fargo Center"
+      },
+      {
+        "id": 2,
+        "name": "Phish @ MSG",
+        "image": "assets/phish.jpeg",
+        "date": "Dec. 31st, 2023",
+        "venue": "Madison Square Garden"
+      },
+      {
+        "id": 3,
+        "name": "Tupac Shakur",
+        "image": "assets/tupac.jpeg",
+        "date": "January 15th, 2024",
+        "venue": "The Sphere" 
+      }
+    ]
+  }
