@@ -15,6 +15,7 @@ function fetchStateEvents(stateId, apiKey) {
         //figure out how to delete existing list from the DOM so we can show the new results
         eventArray.events.forEach((eventObj) => {
         const eventCard = document.createElement('div')
+        eventCard.className = 'event-card'
         const imageThumbDiv = document.createElement('div')
         eventCard.appendChild(imageThumbDiv)
         const img = document.createElement('img')
@@ -28,21 +29,31 @@ function fetchStateEvents(stateId, apiKey) {
         const title = document.createElement('h3') 
         title.textContent = eventObj.name
         eventDetailsDiv.appendChild(title)
-        const date = document.createElement('p') 
+        const date = document.createElement('p')
         date.textContent = eventObj.startDate
         eventDetailsDiv.appendChild(date)
         const venue = document.createElement('p') 
         venue.textContent = eventObj.location.name
-        eventDetailsDiv.appendChild(venue)  
-        //create and append the bookmark graphic
+        eventDetailsDiv.appendChild(venue)
+        //create and append the bookmark graphic 
+        const saveEvent = document.createElement('div')
+        saveEvent.className = 'save-event'
+        const bookmark = document.createElement('img')
+        bookmark.src = "./assets/bookmark_empty.png"
+        bookmark.className = 'bookmark'
+        saveEvent.appendChild(bookmark)
+        eventDetailsDiv.appendChild(saveEvent)
+        
+        
         //create eventlistener and function to change bookmark color on mouseover
         //create eventlistener and function to change bookmark color on click
         eventsList.appendChild(eventCard)
+        //make it so that the previous city selection gets cleared before creating new list
         })
     }    
 }
 
-const form = document.querySelector('#state-form')
+const form = document.querySelector('#search-form')
 form.addEventListener('submit', (e) => displayEvents(e))
 function displayEvents(e) {
     e.preventDefault()
