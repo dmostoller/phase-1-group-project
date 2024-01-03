@@ -8,6 +8,10 @@ h3 {
 p {
     color: rgb(215, 215, 215);
 }
+.featured-card {
+    float: left;
+
+}
 .search-bar {
     margin: auto;
     width: 75%;

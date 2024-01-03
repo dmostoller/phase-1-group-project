@@ -3,6 +3,43 @@ const apiKey = "93f5cc80-f6d0-4f03-a4c7-fce468ed501d"
 //fetch("https://www.jambase.com/jb-api/v1/events?apikey=93f5cc80-f6d0-4f03-a4c7-fce468ed501d")
 //    .then((resp) => resp.json())
 //    .then((data) => console.log(data))
+fetch('http://localhost:3000/featured-events')
+.then((resp) => resp.json())
+.then((featuredEventsArray) => renderFeatured(featuredEventsArray))
+
+function renderFeatured(featuredEventsArray) {
+//featuredEventsArray is an array of objects
+// designate where they will go
+const featuredContainer = document.querySelector("#featured-events")
+
+featuredEventsArray.forEach((featuredObj) => {
+const featuredDiv = document.createElement('div')
+featuredDiv.className = "featured-card"
+featuredContainer.appendChild(featuredDiv)
+const featuredName = document.createElement('h3')
+const featuredImg = document.createElement('img')
+const featuredDate = document.createElement('p')
+const featuredVenue = document.createElement('p')
+const bookmark = document.createElement('img')
+
+
+featuredName.textContent = featuredObj.name
+featuredImg.src = featuredObj.image
+featuredDate.textContent = featuredObj.date
+featuredVenue.textContent = featuredObj.venue
+bookmark.className = 'bookmark'
+bookmark.src = "./assets/bookmark_empty.png"
+
+featuredDiv.appendChild(featuredImg)
+featuredDiv.appendChild(featuredName)
+featuredDiv.appendChild(featuredVenue)
+featuredDiv.appendChild(featuredDate)
+featuredDiv.appendChild(bookmark)
+
+
+})
+
+}
 
 function fetchStateEvents(stateId, apiKey) {
     fetch(`https://www.jambase.com/jb-api/v1/events?geoStateIso=${stateId}&apikey=${apiKey}`)
