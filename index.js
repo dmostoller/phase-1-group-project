@@ -10,9 +10,8 @@ function fetchStateEvents(stateId, apiKey) {
     .then((data) => renderEventList(data))
 
     function renderEventList(eventArray){
-        console.log(eventArray)
+        //console.log(eventArray)
         const eventsList = document.querySelector("#event-container")
-        //figure out how to delete existing list from the DOM so we can show the new results
         eventArray.events.forEach((eventObj) => {
         const eventCard = document.createElement('div')
         eventCard.className = 'event-card'
@@ -58,16 +57,19 @@ form.addEventListener('submit', (e) => displayEvents(e))
 function displayEvents(e) {
     e.preventDefault()
     const stateId = e.target['state-list'].value
-    console.log(stateId)
+    //console.log(stateId)
+    document.querySelectorAll('.event-card').forEach(e => e.remove());
     fetchStateEvents(stateId, apiKey)
+    hideBanner()
 }
 
-// function fetchEvent(eventId, apiKey) {
-//     fetch(`https://www.jambase.com/jb-api/v1/events/id/jambase:${eventId}?apikey=${apiKey}`)
-//     .then((resp) => resp.json())
-//     .then((data) => renderEvent(data))
-// }
 
-// eventId = "11091519"
-// fetchEvent(eventId, apiKey)
-
+// function for hiding and showing banner
+function hideBanner() {
+    const bannerDiv = document.querySelector('#concert-banner')
+        if (bannerDiv.style.display === "none") {
+            bannerDiv.style.display = "blocl";
+        } else {
+            bannerDiv.style.display = "none";
+        }
+    } 
