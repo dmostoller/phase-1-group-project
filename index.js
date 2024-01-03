@@ -58,56 +58,65 @@ function fetchStateEvents(stateId, apiKey) {
     .then((data) => renderEventList(data))
 
     function renderEventList(eventArray){
-        //console.log(eventArray)
+        console.log(eventArray)
         const eventsList = document.querySelector("#event-container")
         eventArray.events.forEach((eventObj) => {
-        const eventCard = document.createElement('div')
-        eventCard.className = 'event-card'
-        const imageThumbDiv = document.createElement('div')
-        eventCard.appendChild(imageThumbDiv)
-        const img = document.createElement('img')
-        img.src = eventObj.image
-        img.className = 'image'
-        imageThumbDiv.className = 'event-thumb'
-        imageThumbDiv.appendChild(img)
-        const eventDetailsDiv = document.createElement('div')
-        eventCard.appendChild(eventDetailsDiv)
-        eventDetailsDiv.className = 'event-details'
-        const title = document.createElement('h3') 
-        title.textContent = eventObj.name
-        eventDetailsDiv.appendChild(title)
-        const date = document.createElement('p')
-        date.textContent = eventObj.startDate
-        eventDetailsDiv.appendChild(date)
-        const venue = document.createElement('p') 
-        venue.textContent = eventObj.location.name
-        eventDetailsDiv.appendChild(venue)
-        //create and append the bookmark graphic 
-        const saveEvent = document.createElement('div')
-        saveEvent.className = 'save-event'
-        const bookmark = document.createElement('img')
-        bookmark.src = "./assets/bookmark_empty.png"
-        bookmark.className = 'bookmark'
-        saveEvent.appendChild(bookmark)
-        eventDetailsDiv.appendChild(saveEvent)
-        
-         //create eventlistener and function to change bookmark color on mouseover
-        // bookmark.addEventListener('mouseover', () => {
-        //     bookmark.src = "./assets/bookmark_full.png";
-        // });
-        // bookmark.addEventListener('mouseout', () => {
-        //     bookmark.src = "./assets/bookmark_empty.png";
-        // });
-        //create eventlistener and function to change bookmark color on click
-        
-        bookmark.addEventListener('click', () => {
-            if (bookmark.src.includes("./assets/bookmark_full.png")) {
-                bookmark.src = "./assets/bookmark_empty.png";
-            } else {
-                bookmark.src = "./assets/bookmark_full.png";
-            }
-        });
-        eventsList.appendChild(eventCard)
+            const eventCard = document.createElement('div')
+            eventCard.className = 'event-card'
+            const imageThumbDiv = document.createElement('div')
+            eventCard.appendChild(imageThumbDiv)
+            const img = document.createElement('img')
+            img.src = eventObj.image
+            img.className = 'image'
+            imageThumbDiv.className = 'event-thumb'
+            imageThumbDiv.appendChild(img)
+            const eventDetailsDiv = document.createElement('div')
+            eventCard.appendChild(eventDetailsDiv)
+            eventDetailsDiv.className = 'event-details'
+            const title = document.createElement('h3') 
+            //title.textContent = eventObj.name
+            const titleUrl = document.createElement('a')
+            titleUrl.href = eventObj.url
+            titleUrl.target = "_blank"
+            titleUrl.textContent = eventObj.name
+            title.appendChild(titleUrl)
+            eventDetailsDiv.appendChild(title)
+            const date = document.createElement('p')
+            date.textContent = eventObj.startDate
+            eventDetailsDiv.appendChild(date)
+            const venue = document.createElement('p')
+            const venueUrl = document.createElement('a')
+            venueUrl.target = "_blank"
+            venueUrl.href = eventObj.location.url
+            venueUrl.textContent = eventObj.location.name
+            venue.appendChild(venueUrl)
+            eventDetailsDiv.appendChild(venue)
+            //create and append the bookmark graphic 
+            const saveEvent = document.createElement('div')
+            saveEvent.className = 'save-event'
+            const bookmark = document.createElement('img')
+            bookmark.src = "./assets/bookmark_empty.png"
+            bookmark.className = 'bookmark'
+            saveEvent.appendChild(bookmark)
+            eventDetailsDiv.appendChild(saveEvent)
+            
+            //create eventlistener and function to change bookmark color on mouseover
+            // bookmark.addEventListener('mouseover', () => {
+            //     bookmark.src = "./assets/bookmark_full.png";
+            // });
+            // bookmark.addEventListener('mouseout', () => {
+            //     bookmark.src = "./assets/bookmark_empty.png";
+            // });
+            //create eventlistener and function to change bookmark color on click
+            
+            bookmark.addEventListener('click', () => {
+                if (bookmark.src.includes("./assets/bookmark_full.png")) {
+                    bookmark.src = "./assets/bookmark_empty.png";
+                } else {
+                    bookmark.src = "./assets/bookmark_full.png";
+                }
+            });
+            eventsList.appendChild(eventCard)
         })
     }    
 }
