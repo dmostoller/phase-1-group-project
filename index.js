@@ -46,7 +46,18 @@ function fetchStateEvents(stateId, apiKey) {
         
         
         //create eventlistener and function to change bookmark color on mouseover
+        eventCard.addEventListener('mouseover', () => {
+            bookmark.src = "./assets/bookmark_blue.png";
+        });
         //create eventlistener and function to change bookmark color on click
+        eventCard.addEventListener('click', () => {
+            if (bookmark.src.includes("./assets/bookmark_blue.png")) {
+                bookmark.src = "./assets/bookmark_empty.png";
+            } else {
+                bookmark.src = "./assets/bookmark_blue.png";
+            }
+        });
+
         eventsList.appendChild(eventCard)
         //make it so that the previous city selection gets cleared before creating new list
         })
