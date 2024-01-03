@@ -34,6 +34,20 @@ featuredEventsArray.forEach((featuredObj) => {
     featuredDiv.appendChild(featuredVenue)
     featuredDiv.appendChild(featuredDate)
     featuredDiv.appendChild(bookmark)
+
+    // bookmark.addEventListener('mouseover', () => {
+    //     bookmark.src = "./assets/bookmark_full.png";
+    // });
+    // bookmark.addEventListener('mouseout', () => {
+    //     bookmark.src = "./assets/bookmark_empty.png";
+    // });
+    bookmark.addEventListener('click', () => {
+        if (bookmark.src.includes("./assets/bookmark_full.png")) {
+            bookmark.src = "./assets/bookmark_empty.png";
+        } else {
+            bookmark.src = "./assets/bookmark_full.png";
+        }
+    });
 })
 
 }
@@ -77,21 +91,23 @@ function fetchStateEvents(stateId, apiKey) {
         saveEvent.appendChild(bookmark)
         eventDetailsDiv.appendChild(saveEvent)
         
-
          //create eventlistener and function to change bookmark color on mouseover
-        //eventCard.addEventListener('mouseover', () => {
-            //bookmark.src = "./assets/bookmark_full.png";
-        //});
+        // bookmark.addEventListener('mouseover', () => {
+        //     bookmark.src = "./assets/bookmark_full.png";
+        // });
+        // bookmark.addEventListener('mouseout', () => {
+        //     bookmark.src = "./assets/bookmark_empty.png";
+        // });
         //create eventlistener and function to change bookmark color on click
-        eventCard.addEventListener('click', () => {
-            if (bookmark.src.includes("./assets/bookmark_empty.png")) {
-                bookmark.src = "./assets/bookmark_full.png";
-            } else {
+        
+        bookmark.addEventListener('click', () => {
+            if (bookmark.src.includes("./assets/bookmark_full.png")) {
                 bookmark.src = "./assets/bookmark_empty.png";
+            } else {
+                bookmark.src = "./assets/bookmark_full.png";
             }
         });
         eventsList.appendChild(eventCard)
-        //make it so that the previous city selection gets cleared before creating new list
         })
     }    
 }
@@ -112,18 +128,17 @@ function displayEvents(e) {
 // function for hiding and showing banner
 function hideBanner() {
     const bannerDiv = document.querySelector('#concert-banner')
-        if (bannerDiv.style.display === "none") {
-            bannerDiv.style.display = "block";
-        } else {
-            bannerDiv.style.display = "none";
-        }
+    bannerDiv.style.display = "none"
     } 
 function hideFeatured() {
     const featured = document.querySelector('#featured-events')
-        if (featured.style.display === "none") {
-            featured.style.display = "block";
-        } else {
-            featured.style.display = "none";
-        }
-
+    featured.style.display = "none"
 }
+
+const bannerImage = document.querySelector('.banner-image')
+bannerImage.addEventListener('mouseover', function() {
+    bannerImage.src = "./assets/concert-2.jpg"
+})
+bannerImage.addEventListener('mouseout', function() {
+    bannerImage.src = "./assets/concert-1.jpg"
+})
