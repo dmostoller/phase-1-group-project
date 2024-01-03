@@ -29,7 +29,7 @@ function fetchStateEvents(stateId, apiKey) {
         const title = document.createElement('h3') 
         title.textContent = eventObj.name
         eventDetailsDiv.appendChild(title)
-        const date = document.createElement('p') 
+        const date = document.createElement('p')
         date.textContent = eventObj.startDate
         eventDetailsDiv.appendChild(date)
         const venue = document.createElement('p') 
@@ -48,6 +48,7 @@ function fetchStateEvents(stateId, apiKey) {
         //create eventlistener and function to change bookmark color on mouseover
         //create eventlistener and function to change bookmark color on click
         eventsList.appendChild(eventCard)
+        //make it so that the previous city selection gets cleared before creating new list
         })
     }    
 }
