@@ -125,6 +125,33 @@
       "venue": "The Momentary",
       "venueurl": "https://www.jambase.com/venue/the-momentary",
       "id": 14
+    },
+    {
+      "name": "38 Special at Caloosa Sound Amphitheater",
+      "date": "2024-01-04T19:00:00",
+      "url": "https://www.jambase.com/show/38-special-caloosa-sound-amphitheater-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2017/02/38-special-38-special-9f4604bd-2436-4488-810b-b9767f491365_288521_RETINA_LANDSCAPE_16_9-1480x832.jpg",
+      "venue": "Caloosa Sound Amphitheater",
+      "venueurl": "https://www.jambase.com/venue/caloosa-sound-amphitheater",
+      "id": 15
+    },
+    {
+      "name": "Crashing Cairo at The Pike Room",
+      "date": "2024-01-06T19:00:00",
+      "url": "https://www.jambase.com/show/crashing-cairo-the-pike-room-20240106",
+      "image": "https://www.jambase.com/wp-content/uploads/2021/08/jambase-default-band-image-bw-1480x832.png",
+      "venue": "The Pike Room",
+      "venueurl": "https://www.jambase.com/venue/the-pike-room",
+      "id": 16
+    },
+    {
+      "name": "28 Days Later at xBk",
+      "date": "2024-01-04T19:00:00",
+      "url": "https://www.jambase.com/show/28-days-later-xbk-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2021/08/jambase-default-band-image-bw-1480x832.png",
+      "venue": "xBk",
+      "venueurl": "https://www.jambase.com/venue/xbk",
+      "id": 17
     }
   ]
 }

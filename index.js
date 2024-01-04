@@ -18,20 +18,23 @@ featuredEventsArray.forEach((featuredObj) => {
         const featuredDate = document.createElement('p')
         const featuredVenue = document.createElement('p')
         const bookmark = document.createElement('img')
-        //add 'a' tag to name to make it a link, set to info from db.json, append to dom
-        
-        //add 'a'tag to venue name to make it a link, set to info from db.json, append to dom
-
-        featuredName.textContent = featuredObj.name
+        const nameUrl = document.createElement('a')
+        const venueUrl = document.createElement('a')
+        nameUrl.href = featuredObj.url
+        nameUrl.target = "_blank"
+        nameUrl.textContent = featuredObj.name
+        venueUrl.target = "_blank"
+        venueUrl.href = featuredObj.venueurl
+        venueUrl.textContent = featuredObj.venue
         featuredImg.src = featuredObj.image
         featuredDate.textContent = featuredObj.date
-        featuredVenue.textContent = featuredObj.venue
-        
         //stop forEach loop after 3 entries
         if (featuredObj.id > 3){
             return;
         }
         featuredContainer.appendChild(featuredDiv)
+        featuredName.appendChild(nameUrl)
+        featuredVenue.appendChild(venueUrl)
         featuredDiv.appendChild(featuredImg)
         featuredDiv.appendChild(featuredName)
         featuredDiv.appendChild(featuredVenue)
