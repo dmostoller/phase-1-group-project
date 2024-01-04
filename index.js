@@ -260,11 +260,5 @@ savedIcon.addEventListener('mouseout', function() {
     })
 //navigate to saved events page on click
 savedIcon.addEventListener('click', (e) => renderSavedEvents(e))
-const trashIcon = document.querySelector('#trash-icon')
-    trashIcon.addEventListener('mouseover', function() {
-    trashIcon.src= "./assets/trash-can-grey.png"
-    })
-    trashIcon.addEventListener('mouseout', function() {
-        trashIcon.src= "./assets/trash-can-white.png"
-    })
+
 

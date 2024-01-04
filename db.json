@@ -80,6 +80,51 @@
       "venue": "The Fillmore",
       "venueurl": "https://www.jambase.com/venue/the-fillmore-san-francisco-ca-us",
       "id": 9
+    },
+    {
+      "name": "Nate Smith at Georgia Theatre",
+      "date": "2024-01-04T19:30:00",
+      "url": "https://www.jambase.com/show/nate-smith-georgia-theatre-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2023/05/nate-smith-1480x832.png",
+      "venue": "Georgia Theatre",
+      "venueurl": "https://www.jambase.com/venue/georgia-theatre",
+      "id": 10
+    },
+    {
+      "name": "Sofi Tukker at Belly Up Aspen",
+      "date": "2024-01-04T19:00:00",
+      "url": "https://www.jambase.com/show/sofi-tukker-belly-up-aspen-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2019/10/sofi-tukker-ticketmaster-ram-1480x832.jpg",
+      "venue": "Belly Up Aspen",
+      "venueurl": "https://www.jambase.com/venue/belly-up-aspen",
+      "id": 11
+    },
+    {
+      "name": "UCB at Songbyrd Music House",
+      "date": "2024-01-04T19:00:00",
+      "url": "https://www.jambase.com/show/ucb-songbyrd-music-house-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2021/08/jambase-default-band-image-bw-1480x832.png",
+      "venue": "Songbyrd Music House",
+      "venueurl": "https://www.jambase.com/venue/songbyrd-music-house",
+      "id": 12
+    },
+    {
+      "name": "Afroman at The Moxi Theatre",
+      "date": "2024-01-04T20:00:00",
+      "url": "https://www.jambase.com/show/afroman-the-moxi-theatre-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2023/01/afroman-1480x832.png",
+      "venue": "The Moxi Theatre",
+      "venueurl": "https://www.jambase.com/venue/the-moxi-theatre",
+      "id": 13
+    },
+    {
+      "name": "Briscoe at The Momentary",
+      "date": "2024-01-10T19:00:00",
+      "url": "https://www.jambase.com/show/briscoe-the-momentary-20240110",
+      "image": "https://www.jambase.com/wp-content/uploads/2021/08/jambase-default-band-image-bw-1480x832.png",
+      "venue": "The Momentary",
+      "venueurl": "https://www.jambase.com/venue/the-momentary",
+      "id": 14
     }
   ]
 }
