@@ -197,11 +197,20 @@ function fetchStateEvents(stateId, apiKey) {
             trashCan.addEventListener('mouseout', function() {
                 trashCan.src= "./assets/trash-can-white.png"
             })
-//////////////add eventlistener for click with callback function to delete the saved event
+             //eventlistener for click with callback function to delete the saved event
+             trashCan.addEventListener('click', (e) => handleDeleteEvent(e))
+             
+             //create function that does a fetch delete to remove the saved event from db.json
+             function handleDeleteEvent(e) {
+                e.preventDefault()
+                
+                fetch('http://localhost:3000/saved-events/${savedEventObj.id}', {
+                    
+                    method : 'DELETE',
+                    })
+                renderSavedEvents()
 
-//////////////create function that does a fetch delete to remove the saved event from db.json
-
-        })
+        }
             hideStateView()
             hideFeatured()
             hideBanner()
