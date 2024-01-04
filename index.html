@@ -11,8 +11,10 @@
             <img src="assets/concert-1.jpg" id="banner-image" class="banner-image" alt="Find a concert near you"/>
         </div>
         <div class="search-bar">
-            <form name="search-form" id="search-form" class="search-form">
-                    <select name="state-list" class="state-list"> 
+            <a href="index.html"><img src="assets/home.png" id="home-icon" /></a>
+            <img src="assets/bookmark-small-blk.png" id="saved-icon" />
+                <div name="search-form" id="search-form" class="search-form">
+                    <select name="state-list" id="state-list" class="state-list"> 
                               <option value="">Select a state</option>
                               <option value="US-AL">Alabama</option>
                               <option value="US-AK">Alaska</option>
@@ -66,17 +68,13 @@
                               <option value="US-WI">Wisconsin</option>
                               <option value="US-WY">Wyoming</option>
                     </select>
-                    <button class="search-button" type="submit">Search</button>        
-            </form>
+                </div>           
         </div>
-
-        <div id="featured-events">
-
+        <div id="featured-events"></div>
+        <div id="event-container"></div>
+        <div id="saved-events">
+            <h1>Saved Events</h1>
         </div>
-        <div id="event-container">
-        </div>
-
-
     </body>
 
 </html>

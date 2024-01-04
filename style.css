@@ -4,6 +4,10 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 100%;
 }
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
 h3 {
     color: white;
 }
@@ -22,12 +26,21 @@ a:visited {
     color: #a3a0a0;
     text-decoration: none;
 }
+#home-icon {
+    float: left;
+    padding: 8px 8px;
+    display: none;
+}
+#saved-icon {
+    float: right;
+    padding: 8px 8px;
+}
 #featured-events {
     margin: auto;
     width: 75%;
     min-width: 850px;
     max-width: 900px;
-
+    align-content: center;    
 }
 .featured-card {
     float: left;
@@ -35,11 +48,12 @@ a:visited {
     border: 4px solid rgb(84,84,84, 0.5);
     background-color: rgb(0,0,0, 0.75);
     padding: 10px;
-    margin: 10px;
+    margin-left: 25px;
     border-radius: 3px;
+    max-width: 250px;
 }
 .featured-img {
-    width: 250px;
+    width: 225px;
 }
 .search-bar {
     margin: auto;
@@ -53,26 +67,17 @@ a:visited {
     margin-bottom: 10px;
     border-radius: 3px;
 } 
-.state-list {
-    padding: 6px 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
-}
-.search-button {
-    background-color: #000000;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;   
-    border-radius: 4px; 
-}
 .search-form {
     margin: auto;
-    width: 25%;
+    width: 20%;
     min-width: 250px;
+    padding: 6px;
+}
+.state-list {
+    padding: 6px 36px;
+    border: none;
+    border-radius: 4px;
+    background-color: #b8b8b8;
 }
 #concert-banner {
     margin: auto;
@@ -94,7 +99,12 @@ a:visited {
     overflow-x: hidden;
     overflow-y: auto;
     margin-left: 15px;
-
+}
+#saved-events {
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 15px;
 }
 .event-card {
     margin: auto;
@@ -120,7 +130,4 @@ a:visited {
     width: 300px;
     border-radius: 3px;
 }
-.bookmark {
-
-
-}
+.bookmark {}
