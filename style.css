@@ -90,8 +90,8 @@ a:visited {
 }
 .banner-image {
     width: 100%;
-    margin: auto
-    min-width: 850px;
+    margin: auto;
+    min-width: 850px; 
     max-width: 900px;
 }
 #event-container {
@@ -130,4 +130,3 @@ a:visited {
     width: 300px;
     border-radius: 3px;
 }
-.bookmark {}
