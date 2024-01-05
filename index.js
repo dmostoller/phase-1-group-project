@@ -39,8 +39,6 @@ featuredEventsArray.forEach((featuredObj) => {
         featuredDiv.appendChild(featuredName)
         featuredDiv.appendChild(featuredVenue)
         featuredDiv.appendChild(featuredDate)
-
-
     })
 }
 //show state view on dropdown menu change
@@ -149,11 +147,12 @@ function fetchStateEvents(stateId, apiKey) {
         .then((data) => renderSaved(data))
     }
     function renderSaved(savedEventsArray) {
+        document.querySelectorAll('.saved-card').forEach(e => e.remove());
         const savedEventsList = document.querySelector("#saved-events")
         savedEventsArray.forEach((savedEventObj) => {
             //console.log(savedEventObj)
             const eventCard = document.createElement('div')
-            eventCard.className = 'event-card'
+            eventCard.className = 'saved-card'
             const imageThumbDiv = document.createElement('div')
             eventCard.appendChild(imageThumbDiv)
             const img = document.createElement('img')
@@ -197,10 +196,15 @@ function fetchStateEvents(stateId, apiKey) {
             trashCan.addEventListener('mouseout', function() {
                 trashCan.src= "./assets/trash-can-white.png"
             })
-//////////////add eventlistener for click with callback function to delete the saved event
-
-//////////////create function that does a fetch delete to remove the saved event from db.json
-
+            //eventlistener for click with callback function to delete the saved event
+            trashCan.addEventListener('click', (e) => deleteSavedEvent(e))
+            function deleteSavedEvent(e) {
+                fetch(`http://localhost:3000/saved-events/${savedEventObj.id}`, 
+                {
+                    method : 'DELETE'
+                })
+                savedEventsList.removeChild(eventCard)
+            }
         })
             hideStateView()
             hideFeatured()
