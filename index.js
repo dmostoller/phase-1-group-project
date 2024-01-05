@@ -211,6 +211,7 @@ function fetchStateEvents(stateId, apiKey) {
                 renderSavedEvents()
 
         }
+    })
             hideStateView()
             hideFeatured()
             hideBanner()
