@@ -1,3 +1,40 @@
 {
-  "saved-events": []
+  "saved-events": [
+    {
+      "name": "50 Cent at Shrine @ Foxwoods",
+      "date": "2024-01-12T21:00:00",
+      "url": "https://www.jambase.com/show/50-cent-shrine-foxwoods-20240112",
+      "image": "https://www.jambase.com/wp-content/uploads/2017/02/50-cent-50-cent-5d1e9bff-0302-465b-8a75-e4a0ba0c114a_58021_TABLET_LANDSCAPE_16_9-1480x832.jpg",
+      "venue": "Shrine @ Foxwoods",
+      "venueurl": "https://www.jambase.com/venue/shrine-foxwoods",
+      "id": 1
+    },
+    {
+      "name": "Nate Smith at Georgia Theatre",
+      "date": "2024-01-04T19:30:00",
+      "url": "https://www.jambase.com/show/nate-smith-georgia-theatre-20240104",
+      "image": "https://www.jambase.com/wp-content/uploads/2023/05/nate-smith-1480x832.png",
+      "venue": "Georgia Theatre",
+      "venueurl": "https://www.jambase.com/venue/georgia-theatre",
+      "id": 2
+    },
+    {
+      "name": "Mihali at The Pickle Barrel",
+      "date": "2024-01-17T20:00:00",
+      "url": "https://www.jambase.com/show/mihali-the-pickle-barrel-20240117",
+      "image": "https://www.jambase.com/wp-content/uploads/2020/01/mihali-press-photo-2020_new-1480x832.jpg",
+      "venue": "The Pickle Barrel",
+      "venueurl": "https://www.jambase.com/venue/the-pickle-barrel",
+      "id": 3
+    },
+    {
+      "name": "Spafford at Aura",
+      "date": "2024-01-12T19:00:00",
+      "url": "https://www.jambase.com/show/spafford-aura-20240112",
+      "image": "https://www.jambase.com/wp-content/uploads/2015/06/spafford-2023-press-1480x832.jpg",
+      "venue": "Aura",
+      "venueurl": "https://www.jambase.com/venue/aura-5",
+      "id": 4
+    }
+  ]
 }
