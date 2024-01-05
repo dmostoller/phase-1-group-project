@@ -27,6 +27,7 @@ featuredEventsArray.forEach((featuredObj) => {
         const bookmark = document.createElement('img')
         const nameUrl = document.createElement('a')
         const venueUrl = document.createElement('a')
+
         nameUrl.href = featuredObj.url
         nameUrl.target = "_blank"
         nameUrl.textContent = featuredObj.name
@@ -75,39 +76,41 @@ function fetchStateEvents(stateId, apiKey) {
         const eventsList = document.querySelector("#event-container")
         eventArray.events.forEach((eventObj) => {
             const eventCard = document.createElement('div')
-                eventCard.className = 'event-card'
-            const imageThumbDiv = document.createElement('div')
-            eventCard.appendChild(imageThumbDiv)
-            const img = document.createElement('img')
-                img.src = eventObj.image
-                img.className = 'image'
-                imageThumbDiv.className = 'event-thumb'
-                imageThumbDiv.appendChild(img)
-            const eventDetailsDiv = document.createElement('div')
-            eventCard.appendChild(eventDetailsDiv)
-                eventDetailsDiv.className = 'event-details'
+            const imageThumbDiv = document.createElement('div')    
+            const img = document.createElement('img')   
+            const eventDetailsDiv = document.createElement('div')     
             const title = document.createElement('h3') 
             const titleUrl = document.createElement('a')
-                titleUrl.href = eventObj.url
-                titleUrl.target = "_blank"
-                titleUrl.textContent = eventObj.name
-                title.appendChild(titleUrl)
-            eventDetailsDiv.appendChild(title)
             const date = document.createElement('p')
-                date.textContent = eventObj.startDate
-            eventDetailsDiv.appendChild(date)
             const venue = document.createElement('p')
             const venueUrl = document.createElement('a')
-                venueUrl.target = "_blank"
-                venueUrl.href = eventObj.location.url
-                venueUrl.textContent = eventObj.location.name
+            const saveEvent = document.createElement('div')
+            const bookmark = document.createElement('img')
+
+            eventCard.className = 'event-card'
+            img.src = eventObj.image
+            img.className = 'image'
+            imageThumbDiv.className = 'event-thumb'
+            eventDetailsDiv.className = 'event-details'
+            titleUrl.href = eventObj.url
+            titleUrl.target = "_blank"
+            titleUrl.textContent = eventObj.name
+            date.textContent = eventObj.startDate
+            venueUrl.target = "_blank"
+            venueUrl.href = eventObj.location.url
+            venueUrl.textContent = eventObj.location.name
+            saveEvent.className = 'save-event'
+            bookmark.src = "./assets/bookmark_empty.png"
+            bookmark.className = 'bookmark'
+
+            eventCard.appendChild(imageThumbDiv)
+            eventCard.appendChild(eventDetailsDiv)
+            imageThumbDiv.appendChild(img)
+            title.appendChild(titleUrl)
+            eventDetailsDiv.appendChild(title)
+            eventDetailsDiv.appendChild(date)
             venue.appendChild(venueUrl)
             eventDetailsDiv.appendChild(venue)
-            const saveEvent = document.createElement('div')
-                saveEvent.className = 'save-event'
-            const bookmark = document.createElement('img')
-                bookmark.src = "./assets/bookmark_empty.png"
-                bookmark.className = 'bookmark'
             saveEvent.appendChild(bookmark)
             eventDetailsDiv.appendChild(saveEvent) 
             eventsList.appendChild(eventCard)   
@@ -155,39 +158,41 @@ function fetchStateEvents(stateId, apiKey) {
         savedEventsArray.forEach((savedEventObj) => {
             //console.log(savedEventObj)
             const eventCard = document.createElement('div')
-                eventCard.className = 'saved-card'
             const imageThumbDiv = document.createElement('div')
-            eventCard.appendChild(imageThumbDiv)
             const img = document.createElement('img')
-                img.src = savedEventObj.image
-                img.className = 'image'
-                imageThumbDiv.className = 'event-thumb'
-            imageThumbDiv.appendChild(img)
             const eventDetailsDiv = document.createElement('div')
-            eventCard.appendChild(eventDetailsDiv)
-                eventDetailsDiv.className = 'event-details'
             const title = document.createElement('h3') 
             const titleUrl = document.createElement('a')
-                titleUrl.href = savedEventObj.url
-                titleUrl.target = "_blank"
-                titleUrl.textContent = savedEventObj.name
-                title.appendChild(titleUrl)
-            eventDetailsDiv.appendChild(title)
             const date = document.createElement('p')
-                date.textContent = savedEventObj.date
-            eventDetailsDiv.appendChild(date)
             const venue = document.createElement('p')
             const venueUrl = document.createElement('a')
-                venueUrl.target = "_blank"
-                venueUrl.href = savedEventObj.venueurl
-                venueUrl.textContent = savedEventObj.venue
+            const deleteEvent = document.createElement('div')
+            const trashCan = document.createElement('img')
+
+            eventCard.className = 'saved-card'
+            img.src = savedEventObj.image
+            img.className = 'image'
+            imageThumbDiv.className = 'event-thumb'
+            eventDetailsDiv.className = 'event-details'
+            titleUrl.href = savedEventObj.url
+            titleUrl.target = "_blank"
+            titleUrl.textContent = savedEventObj.name
+            date.textContent = savedEventObj.date 
+            venueUrl.target = "_blank"
+            venueUrl.href = savedEventObj.venueurl
+            venueUrl.textContent = savedEventObj.venue
+            deleteEvent.className = 'delete-event'
+            trashCan.src = "./assets/trash-can-white.png"
+            trashCan.className = 'bookmark'
+
+            eventCard.appendChild(imageThumbDiv)
+            imageThumbDiv.appendChild(img)
+            eventCard.appendChild(eventDetailsDiv)
+            title.appendChild(titleUrl)
+            eventDetailsDiv.appendChild(title)
+            eventDetailsDiv.appendChild(date)
             venue.appendChild(venueUrl)
             eventDetailsDiv.appendChild(venue)
-            const deleteEvent = document.createElement('div')
-                deleteEvent.className = 'delete-event'
-            const trashCan = document.createElement('img')
-                trashCan.src = "./assets/trash-can-white.png"
-                trashCan.className = 'bookmark'
             deleteEvent.appendChild(trashCan)
             eventDetailsDiv.appendChild(deleteEvent) 
             savedEventsList.appendChild(eventCard)

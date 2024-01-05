@@ -1,49 +1,31 @@
 {
   "saved-events": [
     {
-      "name": "50 Cent at Shrine @ Foxwoods",
-      "date": "2024-01-12T21:00:00",
-      "url": "https://www.jambase.com/show/50-cent-shrine-foxwoods-20240112",
-      "image": "https://www.jambase.com/wp-content/uploads/2017/02/50-cent-50-cent-5d1e9bff-0302-465b-8a75-e4a0ba0c114a_58021_TABLET_LANDSCAPE_16_9-1480x832.jpg",
-      "venue": "Shrine @ Foxwoods",
-      "venueurl": "https://www.jambase.com/venue/shrine-foxwoods",
+      "name": "Paul Anka at Highlands Church",
+      "date": "2024-01-05T19:30:00",
+      "url": "https://www.jambase.com/show/paul-anka-highlands-church-20240105",
+      "image": "https://www.jambase.com/wp-content/uploads/2019/10/paul-anka-ticketmaster-ram-1480x832.jpg",
+      "venue": "Highlands Church",
+      "venueurl": "https://www.jambase.com/venue/highlands-church",
       "id": 1
     },
     {
-      "name": "Nate Smith at Georgia Theatre",
-      "date": "2024-01-04T19:30:00",
-      "url": "https://www.jambase.com/show/nate-smith-georgia-theatre-20240104",
-      "image": "https://www.jambase.com/wp-content/uploads/2023/05/nate-smith-1480x832.png",
-      "venue": "Georgia Theatre",
-      "venueurl": "https://www.jambase.com/venue/georgia-theatre",
+      "name": "Toxic Positivity at Firecreek Coffee Company",
+      "date": "2024-01-05",
+      "url": "https://www.jambase.com/show/toxic-positivity-firecreek-coffee-company-20240105",
+      "image": "https://www.jambase.com/wp-content/uploads/2023/04/toxic-positivity_3830x2005_jb_cropped-1480x832.jpg",
+      "venue": "Firecreek Coffee Company",
+      "venueurl": "https://www.jambase.com/venue/firecreek-coffee-company",
       "id": 2
     },
     {
-      "name": "Mihali at The Pickle Barrel",
-      "date": "2024-01-17T20:00:00",
-      "url": "https://www.jambase.com/show/mihali-the-pickle-barrel-20240117",
-      "image": "https://www.jambase.com/wp-content/uploads/2020/01/mihali-press-photo-2020_new-1480x832.jpg",
-      "venue": "The Pickle Barrel",
-      "venueurl": "https://www.jambase.com/venue/the-pickle-barrel",
+      "name": "Smoking Popes at Yucca Tap Room",
+      "date": "2024-01-07T20:00:00",
+      "url": "https://www.jambase.com/show/smoking-popes-yucca-tap-room-20240107",
+      "image": "https://www.jambase.com/wp-content/uploads/2023/05/smoking-popes-1480x832.png",
+      "venue": "Yucca Tap Room",
+      "venueurl": "https://www.jambase.com/venue/yucca-tap-room",
       "id": 3
-    },
-    {
-      "name": "Spafford at Aura",
-      "date": "2024-01-12T19:00:00",
-      "url": "https://www.jambase.com/show/spafford-aura-20240112",
-      "image": "https://www.jambase.com/wp-content/uploads/2015/06/spafford-2023-press-1480x832.jpg",
-      "venue": "Aura",
-      "venueurl": "https://www.jambase.com/venue/aura-5",
-      "id": 4
-    },
-    {
-      "name": "Lez Zeppelin at The Gramercy Theatre",
-      "date": "2024-01-06T19:00:00",
-      "url": "https://www.jambase.com/show/lez-zeppelin-the-gramercy-theatre-20240106",
-      "image": "https://www.jambase.com/wp-content/uploads/2023/01/lez-zeppelin-1480x832.png",
-      "venue": "The Gramercy Theatre",
-      "venueurl": "https://www.jambase.com/venue/the-gramercy-theatre",
-      "id": 5
     }
   ]
 }
