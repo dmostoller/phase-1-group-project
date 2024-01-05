@@ -35,6 +35,15 @@
       "venue": "Aura",
       "venueurl": "https://www.jambase.com/venue/aura-5",
       "id": 4
+    },
+    {
+      "name": "Lez Zeppelin at The Gramercy Theatre",
+      "date": "2024-01-06T19:00:00",
+      "url": "https://www.jambase.com/show/lez-zeppelin-the-gramercy-theatre-20240106",
+      "image": "https://www.jambase.com/wp-content/uploads/2023/01/lez-zeppelin-1480x832.png",
+      "venue": "The Gramercy Theatre",
+      "venueurl": "https://www.jambase.com/venue/the-gramercy-theatre",
+      "id": 5
     }
   ]
 }
