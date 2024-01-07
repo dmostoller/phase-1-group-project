@@ -1,13 +1,3 @@
-const apiKey = "93f5cc80-f6d0-4f03-a4c7-fce468ed501d"
-// const path = require('path')
-//require('dotenv').config()
-// import 'dotenv/config'
-//console.log(process.env.API_KEY)
-//const apiKey = process.env.API_KEY
-
-
-
-
 //render featured events section
 fetch('http://localhost:3000/saved-events')
 .then((resp) => resp.json())
@@ -57,7 +47,7 @@ function displayEvents(e) {
     const stateId = e.target.value
     //console.log(stateId)
     document.querySelectorAll('.event-card').forEach(e => e.remove());
-    fetchStateEvents(stateId, apiKey)
+    fetchStateEvents(stateId, API_KEY)
     hideDiv("#concert-banner")
     hideDiv("#featured-events")
     showDiv("#event-container")
